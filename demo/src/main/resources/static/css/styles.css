@@ -1,0 +1,221 @@
+body {
+    background-color: #1a1c10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(-45deg, #960476, #7ed934, #920dc2, #a5f04f);
+    animation: gradient 7s ease infinite;
+    background-size: 250% 400%;
+    border-right-style: solid;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    flex: 1;
+    background: rgba(25, 4, 57, 0.8);
+    padding: 40px;
+    border: none;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+input {
+    width: 100%;
+    max-width: 300px; /* Limita a largura para não esticar demais */
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    display: block;
+}
+
+input:hover {
+    background-color: #c6f2e1;
+    transform: translateX(10px) rotateY(20deg);
+    text-decoration: solid 1px #c2c22a;
+}
+
+button {
+    background: #500430;
+    color: #f999d1;
+    border: 1px  #18104f;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nome {
+    color: #c4d6f2;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background-attachment: fixed;
+    background-color: #18104f;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+
+.cadastrar {
+    color: #f5fdef;
+    background-color: #35047a;
+    border: 1px solid #5dc8ec;
+    padding: 25px 85px;
+    border-radius: 30px;
+    display: flex;
+    cursor: grabbing;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.cadastrar:hover {
+    background-color: #f1eecd;
+    color: #0f981a;
+    border: 1px solid #35047a;
+    transform: translateY(-20px);
+    transition: transform 0.9s ease;
+}
+
+
+
+.google {
+    color: #e4e822; /* Cor oficial do Google */
+    font-size: 40px; /* Tamanho do ícone */
+    margin: 3px;
+    transition: transform 0.3s; /* Para um efeito suave */
+}
+
+.google:hover {
+    color: #dae0d7;
+    transform: scale(1.2) translateY(-10px);
+}
+
+
+.icone-escola {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #00d4ff;
+    font-size: 30px;
+    size: 430px;
+}
+
+
+.logo-escola {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-container {
+    display: flex;
+    width: 900px;
+    min-height: 550px;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    background: linear-gradient(-45deg, #75f1d4, #e8e7e1, #e3aaf8, #f3f6f6);
+    background-size: 20% 400%;
+    animation: gradient 10s ease infinite;
+    z-index: 1;
+}
+
+
+/* Lado da Imagem */
+.card-image {
+    flex: 1;
+    display: flex;
+    padding: 0 !important;
+    margin: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+
+    -webkit-mask-image: linear-gradient(to right, rgb(17, 2, 32) 70%, transparent 100%);
+    mask-image: linear-gradient(to right, rgb(31, 4, 77) 70%, transparent 100%);
+
+
+    mix-blend-mode: multiply;
+
+    opacity: 0.9;
+}
+
+.card-login-area {
+    flex: 1.2;
+    background: rgba(2, 2, 42, 0.9);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Lado do Formulário */
+.card-form {
+    flex: 1;
+    padding: 40px;
+    color: rgb(37, 2, 36);
+
+}
+
+.btn-enviar {
+    background: #085ccb;
+    color: #fffeff;
+    border: 1px solid #500bbf;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-enviar:hover {
+    background-color: #e4e1c7;
+    color: #077110;
+    border: 1px solid #ffffff;
+    transform: translateY(-10px);
+    transition: transform 0.6s ease;
+}
+
+.duplicata{
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.duplicata:hover {
+    background-color: #8e1654;
+    color: #fcfcfc;
+    border: 1px solid #bb1e1e;
+    transform: translateY(-5px);
+    transition: transform 0.6s ease;
+}
