@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Cadastro simplificado</title>
+</head>
+<body>
+<div class="card-container">
+  <div class="card-image">
+    <img th:src="@{/img/academy.jpeg}" alt="Logotipo da Academy">
+  </div>
+
+  <div class="card-login-area">
+    <h2 class="cadastrar">Cadastro de Alunos</h2>
+
+    <div th:if="${param.duplicado}" class="duplicata">
+      ⚠️ Email acadêmico já usado por outro aluno!
+    </div>
+
+
+    <form action="/cadastrar" method="post">
+      <input type="text" name="nome" placeholder="Nome Completo" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="password" name="senha" placeholder="Crie uma Senha" required>
+      <input type="text" name="faculdade" placeholder="Instituição de Ensino" required>
+      <br>
+      <i class="fa-brands fa-google google"></i> Login com Google<br><br>
+      <button type="submit" class="btn-enviar">Cadastrar Aluno</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
